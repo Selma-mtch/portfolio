@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mon Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-uO3SX1sm1cC2/1FDKv4VmewjoGuhEzZEF8oEIkOJQrrzB+/xga+8Z/ehGQGXBjB7EpCJpMwiAGTZJtpoV7u9BA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+.floating-shapes {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  padding: 40px;
+}
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.25;
+  animation: floatShape 12s linear infinite alternate;
+}
+.floating-shape.shape1 { width: 120px; height: 120px; background: #e3b5a4; left: 10vw; top: 20vh; animation-delay: 0s; animation-name: floatShapeX; }
+.floating-shape.shape2 { width: 80px; height: 80px; background: #773344; left: 70vw; top: 60vh; animation-delay: 2s; animation-name: floatShapeY; }
+.floating-shape.shape3 { width: 150px; height: 150px; background: #e4ab97; left: 50vw; top: 10vh; animation-delay: 4s; animation-name: floatShapeX; }
+.floating-shape.shape4 { width: 60px; height: 60px; background: #b76b6b; left: 80vw; top: 30vh; animation-delay: 6s; animation-name: floatShapeY; }
+.floating-shape.shape5 { width: 90px; height: 90px; background: rgba(201, 127, 127, 0.826); left: 30vw; top: 80vh; animation-delay: 1s; animation-duration: 5s; animation-name: floatShapeX; }
+.floating-shape.shape6 { width: 50px; height: 50px; background: #e4ab97; left: 85vw; top: 10vh; animation-delay: 3s; animation-duration: 8s; animation-name: floatShapeY; }
+.floating-shape.shape7 { width: 70px; height: 70px; background: #b76b6b; left: 60vw; top: 50vh; animation-delay: 5s; animation-duration: 2s; animation-name: floatShapeX; }
+.floating-shape.shape8 { width: 110px; height: 110px; background: #773344; left: 15vw; top: 60vh; animation-delay: 7s; animation-duration: 5s; animation-name: floatShapeY; }
+@keyframes floatShapeX { 0% { transform: translateX(0) scale(1);} 50% { transform: translateX(80px) scale(1.1);} 100% { transform: translateX(0) scale(1);} }
+@keyframes floatShapeY { 0% { transform: translateY(0) scale(1);} 50% { transform: translateY(-80px) scale(1.1);} 100% { transform: translateY(0) scale(1);} }
+@keyframes floatShape { 0% { transform: translateY(0) scale(1) rotate(0deg);} 50% { transform: translateY(-120px) scale(1.15) rotate(8deg);} 100% { transform: translateY(-60px) scale(1.15) rotate(-8deg);} }
+</style>
+</head>
+<body>
+  <header>
+    <img src="photo_lycee.jpg" alt="Ma photo">
+    <h1 class="titre">Selma Mataiche</h1>
+    <nav>
+      
+      <h4><a href="portfolio2.html#accueil">
+        <i class="fa fa-home"></i>
+        Accueil</a>
+    </h4>
+    <h4><a href="a_propos.html">
+        <i class="fas fa-user" style="margin-right:0.5em;"></i>
+        A propos de moi</a>
+    </h4>
+    
+    <h4><a href="#presentation">  
+        <i class="fas fa-graduation-cap" style="margin-right:0.5em;"></i>
+        Formation</a>
+    </h4>
+    <h4>
+        <a href="#projets">
+            <i class="fas fa-lightbulb" style="margin-right:0.5em;"></i>
+            Projets
+        </a>
+    </h4>
+    <h4><a href="#competences">
+        <i class="fas fa-laptop-code" style="margin-right:0.5em;"></i>
+        Compétences</a>
+    </h4>
+    <h4><a href="#contact">
+        <i class="fas fa-envelope" style="margin-right:0.5em;"></i>
+        Contact</a>
+    </h4>
+    </nav>
+    <button id="boutonModeSombre">🌙</button>
+  </header>
+
+  <div class="floating-shapes">
+  <div class="floating-shape shape1"></div>
+  <div class="floating-shape shape2"></div>
+  <div class="floating-shape shape3"></div>
+  <div class="floating-shape shape4"></div>
+  <div class="floating-shape shape5"></div>
+  <div class="floating-shape shape6"></div>
+  <div class="floating-shape shape7"></div>
+  <div class="floating-shape shape8"></div>
+  <div class="floating-shape shape9"></div>
+  <div class="floating-shape shape10"></div>
+  <div class="floating-shape shape11"></div>
+  <div class="floating-shape shape12"></div>
+  <div class="floating-shape shape13"></div>
+  <div class="floating-shape shape14"></div>
+  <div class="floating-shape shape15"></div>
+  <div class="floating-shape shape16"></div>
+</div>
+
+  <section class="presentation" id="presentation">
+    <h1 class="titre">Ma formation</h1>
+
+    <div class="img_txt">
+
+        <img id="img_univ" src="photo_universite.jpg" alt="Photo Université Sorbonne Paris Nord">
+        <p class="apparaitre" id="long_p"> 
+            Le BUT Informatique est une formation professionnalisante sur trois ans, 
+            basée sur l’acquisition de compétences techniques solides en développement, 
+            gestion de bases de données, réseaux et systèmes, tout en misant fortement 
+            sur la pratique. Les enseignements sont structurés autour de projets 
+            concrets, réalisés en groupe et en autonomie. Ces projets permettent de développer des 
+            compétences transversales : rigueur, collaboration, gestion de projet et autonomie. 
+            Grâce à ces mises en situation professionnel et à aux périodes de 
+            stage ou d’alternance, nous sommes préparés à nous intégrer rapidement au sein d'une entreprise 
+            ou à poursuivre vers des études supérieures en école d'ingénieur ou en Master.
+        </p>
+    </div>
+
+
+   <section class="Parcours" id="competences">
+    <h2 class="apparaitre">Les compétences du BUT</h2>
+    <div class="liste-parcours">
+      <div class="liste-parcours">
+          <div class="carte-parcours apparaitre">
+            <i class="fas fa-code" style="color:#773344; font-size:1.7rem; margin-bottom:0.5rem;"></i>
+              <h3>Réaliser un développement d'application </h3> 
+              <p>Concevoir, coder, tester et intégrer des solutions.
+                <br>
+                <br>
+                Cette compétence consiste à maîtriser les
+                bonnes pratiques de développement d'application informatique simple,
+                à partir des exigences jusqu'à une application complète. Puis dans 
+                un second temps, à savoir adapter des applications sur un 
+                ensemble de supports. 
+              </p>
+          </div>
+          <div class="carte-parcours apparaitre">
+            <i class="fas fa-tachometer-alt" style="color:#773344; font-size:1.7rem; margin-bottom:0.5rem;"></i>
+              <h3>Optimiser des applications</h3> 
+              <p>Améliorer les performances et l'efficacité des applications informatiques.
+                <br>
+                <br>
+                Cette compétence consiste à concevoir et élaborer des algorithmes
+                et séléctionner les algorithmes les plus adaptés pour répondre à un besoin.
+              Cette compétence m'apprend à élaborer des algorithmes et à choisir
+              ceux qui répondent le mieux à mes besoins.
+              </p>
+          </div>
+
+          <div class="carte-parcours apparaitre">
+            <i class="fas fa-network-wired" style="color:#773344; font-size:1.7rem; margin-bottom:0.5rem;"></i>
+              <h3>Administrer des systèmes informatiques communicants complexes</h3> 
+              <p>Gérer des systèmes interconnectés et assurer leur bon fonctionnement.
+                <br>
+                <br>
+                Cette compétence m'apporte des connaissances en système et en réseau. Je peux ainsi
+                installer, cofigurer et gérer des environnements informatiques complexes.
+                à installer, configurer et administrer des systèmes,
+               L'installation et la configuration d'un poste de travail est une compétence clé Pour
+               un professionnel de l'informatique. J'ai pu m'en rendre compte lors de mon premier stage
+               chez Sage. Si avant ce stage je n'en avais pas conscience, j'ai pu constater lors de cette*
+              experience que cette compétence est essentielle.
+              </p>
+          </div>
+          <div class="carte-parcours apparaitre">
+            <i class="fas fa-network-wired" style="color:#773344; font-size:1.7rem; margin-bottom:0.5rem;"></i>
+              <h3>Gérer des données de l'information</h3> 
+              <p>Manipuler et organiser les données de manière efficace.
+                <br> 
+                Grâce à cette compétence, je suis capable de concevoir des modèles de données
+                adaptés aux besoins et de les implémenter dans des bases de données  solide
+                tout en assurant l'intégrité la sécurité et la performance des données.
+              </p>
+          </div>
+          <div class="carte-parcours apparaitre">
+             <i class="fas fa-project-diagram" style="color:#773344; font-size:1.7rem; margin-bottom:0.5rem;"></i>
+              <h3>Conduire un projet</h3> 
+              <p>Planifier et exécuter des projets informatiques.
+                <br>
+                <br>
+                Grâce à cette compétence, Je suis capable d’organiser et de piloter un projet informatique de A à Z : définir les objectifs, planifier les tâches, coordonner l’équipe, suivre l’avancement et m’assurer que le résultat final répond aux attentes.
+              </p>
+          </div>
+          <div class="carte-parcours apparaitre">
+            <i class="fas fa-users" style="color:#773344; font-size:1.7rem; margin-bottom:0.5rem;"></i>
+              <h3>Collaborer au sein d'une équipe informatique</h3> 
+              <p>Travailler efficacement en équipe pour atteindre des objectifs communs.
+                <br>
+                <br>
+                Mon parcours aux nombreux projets collaboratifs m'a permis d'acquiérir une 
+                bonne capacité à collaborer efficacement au sein d'une équipe, en utilisant des
+                méthodes agiles et des outils de suivi.
+                Cette compétence est essentielle dans le domaine de l'informatique, car la plupart des projets
+                se réalise en équie. 
+              </p>
+          </div>
+        </div>
+      </div>
+  </section>
+</section>
+
+  <section class="projets" id="projets">
+    <h2 class="apparaitre">Mes Projets</h2>
+    <div class="liste-projets">
+      <div class="carte-projet apparaitre" 
+      data-contenu="<h2>Recueil de besoins</h2>
+        <a href='Livrable-5_Mataiche_Selma_Notos.pdf' target='_blank' rel='noopener'>
+        Le prototype complet
+        </a>
+        <h3>Descritpion du projet</h3>
+        <p>Dans ce projet, j’ai accompagné des clients (fictifs) 
+          en recueillant leurs attentes et besoins pour leur futur 
+          site internet. Après avoir préparé une série de questions 
+          pour clarifier leurs objectifs et les solutions envisageables, 
+          j’ai mené des entretiens pour affiner leur vision. À partir de 
+          ces éléments, j’ai rédigé un cahier des charges détaillé servant 
+          de base au développement. Ensuite, il a fallut concevoir une première 
+          version du prototype, que j’ai ajustée en fonction des retours clients,
+          avant de livrer la version finale du site.</p>
+        
+        <h3>A retenir</h3>
+        <p>Ce projet met en valeurs de nombreux aspects du monde 
+          professionel en informatique: <strong>l'autonomie, la gestion du temps 
+          et le respects des délais client, l'organisation, la communication,
+          la collaboration et la technique. </strong>
+          </br>
+          Le recueil de besoins est une étape cruciale dans le développement 
+          d’un projet informatique. Il permet de comprendre les attentes des 
+          utilisateurs et de définir les fonctionnalités nécessaires.
+          </br>
+          </br>
+          J’ai appris à écouter activement, à poser les bonnes questions et à synthétiser les informations pour créer 
+          un cahier des charges clair et précis. 
+          </br>
+          </br>
+          
+          J'ai particulièrement aimé le contact direct avec les clients. En tant que professionnel expert nous avons un rôle de guide 
+          auprès du client et rechercher les solutions les plus adaptées à leurs besoins, en collaboration avec eux, est une étaoe
+          très interessante.
+  
+        </p>""
+      data-description="Description du projet 1"
+      onclick="ouvrirModal(this)">
+
+        <h3>Recueil de besoins</h3>
+        <img src="prototype_recueil.png" alt="Page d'accueil prototype" class="img_projet"><br>
+        Projet académique réaliser en autonomie.
+        <p> <strong>Recueil de besoins -  Communication - Prototype</strong></p>
+        <a href="Livrable-5_Mataiche_Selma_Notos.pdf" target="_blank" rel="noopener" class="repo">
+        Le prototype complet
+        </a>
+      </div>
+
+      <div class="carte-projet apparaitre" 
+      data-contenu="<h2>Application de disscussions en direct</h2>
+      <a href='https://github.com/Cheick6/SAE_S1' target='_blank'>Repo GitHub</a>
+      
+      <h3>Descritpion du projet</h3>
+        <p>PingMe est une application de messagerie en temps réel entre deux utilisateurs, 
+          utilisant <strong> WebSockets</strong> pour une communication instantanée. Sa particularité est d’imposer une annotation par 
+          émoji sur le dernier message reçu avant de pouvoir envoyer un nouveau message annoté. Ainsi, chaque utilisateur 
+          ne voit que ses propres annotations sur ses messages ainsi que sur les messages qu’il a reçus, sans jamais voir 
+          les annotations de l’autre. Conçue pour des services clients, PingMe stocke les messages et les annotations dans 
+          une base <strong>PostgreSQL</strong> et propose une authentification utilisateur pour accéder aux conversations.</p>
+
+        <h3>A retenir</h3>
+        <p>Ce projet a été réalisé en groupe et de façon autonome, ce qui m’a permis de contribuer à toutes les étapes d’un 
+          projet informatique, de la conception à la mise en production. J’ai notamment pu endosser un rôle proche de celui 
+          d’une cheffe de projet, en cadrant le projet dans le respect des délais imposés et en coordonnant le travail de 
+          l’équipe. Cette expérience m’a également permis de me familiariser avec la gestion de projet Agile, d’organiser 
+          efficacement les tâches et d’assurer une communication fluide au sein du groupe. Ce fut une opportunité enrichissante, 
+          tant sur le plan technique qu’organisationnel.
+          </br>
+          </br>
+           Ce projet m’a permis de développer mes capacités d’initiative, d’apprendre à gérer les imprévus et à collaborer 
+           efficacement au sein d’une équipe. Cela m’a aussi donné un premier aperçu concret du cycle de vie 
+           d’un projet informatique. 
+        </p> "
+      data-description="Description du projet 2"
+      onclick="ouvrirModal(this)">
+        <h3>Application de disscussions</h3>
+        <img src="logo_pingMe.png" alt="Logo PingMe" class="img_projet"><br>
+        Projet académique réaliser en autonomie.
+        <p> <strong>PHP - MySQL - JS - WebSocket </strong></p>       
+        <a href="https://github.com/Cheick6/SAE_S1" target="_blank" class="repo">Repo GitHub</a> 
+      </div>
+
+      <div class="carte-projet apparaitre" 
+      data-contenu="<h2>Amélioration de PingMe</h2>
+      <a href='https://github.com/Cheick6/SAE_S1' target='_blank'>Repo GitHub</a>
+      
+      <h3>Descritpion du projet</h3>
+        <p>PingMe est une application de messagerie en temps réel entre deux utilisateurs, 
+          utilisant <strong> WebSockets</strong> pour une communication instantanée. Sa particularité est d’imposer une annotation par 
+          émoji sur le dernier message reçu avant de pouvoir envoyer un nouveau message annoté. Ainsi, chaque utilisateur 
+          ne voit que ses propres annotations sur ses messages ainsi que sur les messages qu’il a reçus, sans jamais voir 
+          les annotations de l’autre. Conçue pour des services clients, PingMe stocke les messages et les annotations dans 
+          une base <strong>PostgreSQL</strong> et propose une authentification utilisateur pour accéder aux conversations.</p>
+
+        <h3>A retenir</h3>
+        <p>Ce projet a été réalisé en groupe et de façon autonome, ce qui m’a permis de contribuer à toutes les étapes d’un 
+          projet informatique, de la conception à la mise en production. J’ai notamment pu endosser un rôle proche de celui 
+          d’une cheffe de projet, en cadrant le projet dans le respect des délais imposés et en coordonnant le travail de 
+          l’équipe. Cette expérience m’a également permis de me familiariser avec la gestion de projet Agile, d’organiser 
+          efficacement les tâches et d’assurer une communication fluide au sein du groupe. Ce fut une opportunité enrichissante, 
+          tant sur le plan technique qu’organisationnel.
+          </br>
+          </br>
+           Ce projet m’a permis de développer mes capacités d’initiative, d’apprendre à gérer les imprévus et à collaborer 
+           efficacement au sein d’une équipe. Cela m’a aussi donné un premier aperçu concret du cycle de vie 
+           d’un projet informatique. 
+        </p> "
+      data-description="Description du projet 6"
+      onclick="ouvrirModal(this)">
+        <h3>Amélioration de l'application de disscussions</h3>
+        <img src="logo_pingMe.png" alt="Logo PingMe" class="img_projet"><br>
+        Projet académique réaliser en autonomie.
+        <p> <strong>PHP - MySQL - JS - WebSocket </strong></p>       
+        <a href="https://github.com/Cheick6/SAE_S1" target="_blank" class="repo">Repo GitHub</a> 
+      </div>
+
+      
+      <div class="carte-projet apparaitre" 
+      data-descritpion="Description du projet 3"
+      onclick="ouvrirModal(this)">
+        <a href="eloquence.html" class="repo">
+        <h3>Concours d'éloquence</h3>
+        <img src="discrous_femme.jpg" alt="Image discours"  class="img_projet"><br>
+        1 ère place du concours d'éloquence de l'IUT de Villetaneuse.
+        <p> <strong>Communication - Expression orale et écrite </strong></p>
+        </a>
+      </div>
+      
+
+        <div class="carte-projet apparaitre" 
+        data-contenu="
+        <h2>Organisation des 24h de l'info</h2>
+         <a href='https://selma-mtch.github.io/24h_Info/' target='_blank'>Notre site des 24h de l'info</a>
+      
+      <h3>Descritpion du projet</h3>
+        <p>Dans le cadre du concours « Les 24h de l’Info », notre groupe a pris en charge l’organisation complète de 
+          l’événement au sein de notre IUT. Nous avons assuré toute la logistique (installation, gestion du matériel, 
+          accueil des participants, etc.), géré la communication avec les équipes (communication en amont sur l'organisaion, 
+          création d’affiches, de formulaires de présentation des équipes, etc.)et développé un site web dédié. 
+          Ce site présentae le concours, son déroulement, ainsi qu’un récapitulatif des temps 
+          forts, permettant de valoriser l’événement et d’informer efficacement tous les participants.</p>
+
+        <h3>A retenir</h3>
+        <p>Cet événement a été une expérience humaine et collective que nous sommes vraiment fiers d’avoir menée à bien. 
+          Accueillir un concours d’une telle ampleur au sein de notre IUT était une occasion rare, et nous sommes ravies 
+          d’y avoir pris part. La collaboration entre tous les membres du groupe a permis de renforcer nos liens, car nous 
+          étions réunis autour d’un objectif commun : offrir aux candidats la meilleure expérience possible, tout en représentant 
+          notre IUT de la plus belle des manières.
+          </br>
+          </br>
+          Travailler ensemble dans une ambiance conviviale, tout en gardant le sérieux nécessaire à l’organisation, 
+          a été l’une de mes plus belles expériences. Le fait que des camarades de notre promotion participent également 
+          au concours a rendu ce moment encore plus fort, et nous a d’autant plus motivées à donner le meilleur de nous-mêmes.
+        </p> 
+        "
+        data-description="Description du projet 4 "
+        onclick="ouvrirModal(this)">
+          <h3>Organisation des 24h de l'info</h3>
+          <img src="24h_info_off.svg" alt="Logo 24h de l'info"  class="img_projet"><br>
+          Concours réunissant tous les IUT de France afin de s’affronter 
+            sur des épreuves d’informatique durant 24h sans interruption.
+          <p> <strong>Communication - Gestion de projet - Esprit d'équipe </strong></p>
+          <a href="https://selma-mtch.github.io/24h_Info/" target="_blank" class="repo">Notre site</a>
+        </div>
+      
+
+        <div class="carte-projet apparaitre" 
+        data-contenu="
+        <h2>Site de recettes</h2>
+        <a href='https://selma-mtch.github.io/SM-Pastry/' target='_blank'>Mon site de recettes</a>
+
+        <p>
+        J’ai commencé à créer mon propre site de recettes de pâtisserie lorsque que j’étais encore au lycée, 
+        motivée par l’envie de mettre en pratique mes premières connaissances en développement web. Comme la 
+        pâtisserie est une de mes passions, ce projet s’est imposé naturellement. Au début, le site n’était 
+        qu’un ensemble de pages statiques au style rudimentaire, mais il m’a permis de faire mes premiers pas 
+        en informatique. Avec le temps et l’acquisition de nouvelles compétences, j’ai peu à peu amélioré son 
+        design et sa structure pour en faire un site à mon image : simple, agréable à utiliser, et reflétant à 
+        la fois mes progrès techniques et ma créativité.
+        <br>
+        <br>
+        Aujourd’hui, ce site est devenu un projet personnel que j'ai l'intention de faire évoluer et d'enrichir.
+        </p>
+        "
+        data-description="Description du projet 5"
+        onclick="ouvrirModal(this)">
+          <h3>Site de recettes</h3>
+          <img src="logo.png" alt="Logo SM-Pastry"  class="img_projet"><br>
+          Développement de mon site de recettes de pâtisserie.
+          <p>Projet personnel</p>
+          <p> <strong>HTML - CSS - JS</strong></p>
+          <a href="https://selma-mtch.github.io/SM-Pastry/" target="_blank" class="repo">Mon site</a>
+        </div>
+      
+    </div>
+  </section>
+  <!-- Modal unique, à placer juste avant la fin du body ou après la section projets -->
+  <div id="modal" class="modal">
+    <div class="modal-contenu">
+      <span class="fermer" onclick="fermerModal()">&times;</span>
+      <h2 id="modal-titre"></h2>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+  <section>
+    <h2 class="apparaitre">Stage</h2>
+    <div class="liste-parcours">
+      <div class="liste-parcours">
+          <div class="carte-parcours apparaitre">
+              <h3><strong>Sage - Editeur de logiciel de gestion</strong></h3> 
+              <p>Pour cette première expeirence en milieu professionnel, j'ai eu l'opportunité d'intégrer
+                l'entreprise <strong>Sage</strong> pour 8 semaines. Ainsi, j'ai travaillé sur 
+                <strong>l'ERP Sage X3</strong>, logiciel de gestion pour les PME-PMI et grands groupes.
+                J'ai principalement pris en charge la création d’une opération, pour l’intégration 
+                d’Anvyl avec Sage X3, du développement à l'intégration en passant par les tests et 
+                la documentation.</p>
+
+                <p>
+                  Ce stage a été une expérience extrêmement enrichissante, tant sur le plan professionnel que personnel. 
+                  Il m’a permis de découvrir le développement logiciel dans un cadre concret, de collaborer efficacement 
+                  au sein d’une équipe et de développer mes compétences en gestion de projet, gestion de données, 
+                  méthodologie Agile, ainsi que mes savoir-faire techniques (notamment en GraphQL). 
+                  Cette immersion dans un environnement exigeant a aussi renforcé mes qualités d’adaptation et de communication 
+                  en français et en anglais. Ce stage m’a ainsi confortée dans mon choix de me diriger vers une carrière 
+                  dans le domaine du développement logiciel et m’a donné de solides atouts à valoriser dans mes futures expériences.
+                </p>
+              
+                <p> <strong>X3 - GraphQL - Test automatisés - Création d'opération - 
+                Méthode Agile - ERP Sage X3</strong></p>
+                <a href="Selma_Mataiche_ BUT2_INFO_rapport_stage.pdf" target="_blank" rel="noopener" class="repo">
+                  Mon rapport de stage
+                </a>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="apparaitre">Contact</h2>
+    <form action="https://formspree.io/f/xzzgbzna" method="POST" class="formulaire-contact">
+      <input type="text" name="nom" placeholder="Nom" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Message" required></textarea>
+      <input type="text" name="_gotcha" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;" aria-hidden="true">
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+
+  <script src="script.js"></script>
+
+  <footer style="background: var(--primary-color); color: var(--accent-color); padding: 2rem 1rem; text-align: center;">
+
+<footer style="background: var(--primary-color); color: var(--accent-color); padding: 2rem 1rem; text-align: center;">
+
+  <p>Contatcez moi par mail<a href="mailto:selma.mataiche77@gmail.com" target="_blank" style="margin: 0 1rem; color: var(--accent-color);">selma.mataiche77@gmail.com</a>ou retrouvez-moi sur :</p>
+  <div style="margin-top: 1rem; font-size: 1.5rem;">
+
+    <button>
+    <a href="http://www.linkedin.com/in/selma-mataiche-981436297" target="_blank" style="margin: 0 1rem; color: var(--accent-color);">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <rect width="24" height="24" rx="4" fill="#cfa190"/>
+      <path d="M7.75 9.5h2.25v7H7.75v-7zm1.13-3.5a1.31 1.31 0 1 1 0 2.62 1.31 1.31 0 0 1 0-2.62zM11.5 9.5h2.16v.96h.03c.3-.57 1.02-1.17 2.1-1.17 2.25 0 2.67 1.48 2.67 3.4v3.81h-2.25v-3.38c0-.81-.01-1.85-1.13-1.85-1.13 0-1.3.88-1.3 1.79v3.44h-2.25v-7z" fill="#0e0e0e"/>
+      </svg>
+      LinkedIn
+    </a>
+    </button>
+
+    <button>
+    <a href="https://github.com/Selma-mtch/" target="_blank" style="margin: 0 1rem; color: var(--accent-color);">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <path fill="#cfa190" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.48 2.87 8.28 6.84 9.63.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/>
+</svg>
+      GitHub
+    </a>
+    </button>
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.9rem;">&copy; 2025 - Mataiche Selma</p>
+</footer>
+
+</body>
+</html>
