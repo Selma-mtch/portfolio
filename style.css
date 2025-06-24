@@ -1,0 +1,391 @@
+/* En haut du fichier */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #773344;      /* Bordeaux profond */
+  --main-color-dark: #5a2533; /* Bordeaux foncé pour hover */
+  --accent-color: #b76b6b;    /* Rose doux (cartes) */
+  --accent-color-light: #e3b5a4; /* Rose très clair (inputs, survol) */
+  --text-color: #cfa190;      /* Beige rosé */
+  --text-color-light: #e7bfb0; /* Presque blanc, pour titres ou survol */
+  --bg-color: #0e0e0e;        /* Fond très foncé */
+  --bg-color-alt: #24181c;    /* Fond secondaire, pour sections */
+  --border-color: #a05a5a;    /* Pour bordures ou séparateurs */
+  --card-color: #b76b6b;        /* couleur carte */
+}
+/* :root {
+  --main-color: #773344;       /* #831e31=bordeaux 
+  --text-color: #cfa190;        /* #e09d8e= beige clair 
+  --bg-color: #0e0e0e;          /* fond foncé 
+  --card-color: #b76b6b;        /* couleur carte 
+  --input-color: #e3b5a4;       /* champ clair 
+} */
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-top:100px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+@keyframes moveBubbles {
+  0% { background-position: 20% 40%, 80% 70%, 60% 20%; }
+  100% { background-position: 25% 45%, 75% 65%, 65% 25%; }
+}
+
+body.dark {
+  background: #f1f1f1;
+  color: var(--main-color);
+}
+
+header {
+  background: var(--main-color);
+  padding: 1rem 1.5rem; /* plus petit padding horizontal */
+  /* padding: 2rem 3rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* {
+  display: flex;
+  flex-direction: row;
+  gap:2rem;
+} */
+
+img{
+    width:60px;
+    height:auto;
+    border-radius:12px;
+}
+
+.img_projet{
+    width:100%;
+    height:200px;
+    border-radius:12px;
+    object-fit: cover; /* Pour que l'image remplisse le conteneur sans déformation */
+}
+
+#img_univ{
+    /* width:auto;
+    height:320px;
+    border-radius:12px; */
+
+    max-width: 100%;  /* Pour éviter que l'image dépasse son conteneur */
+  height: 300px;
+  width: auto;  
+  border-radius:12px; 
+}
+/*
+body > section {
+  margin-top: 60px;
+}
+  */
+
+.titre {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  gap:2rem;
+}
+
+#boutonModeSombre {
+    font-size: 1.8rem;
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.2s;
+    max-width: 40px;  /* évite débordement */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#boutonModeSombre:hover {
+  transform: scale(1.2);
+}
+
+section {
+  padding: 2rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1{
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-color);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+p{
+    font-size: 1.3rem;
+}
+
+#long_p{
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
+a{
+  color:#ea7f7f;
+}
+
+#lien-formation{
+  text-decoration: none;
+}
+
+.repo{
+  /* color:#773344; */
+  color: var( --text-color);
+  font-weight: bold;
+  text-decoration: none;
+
+}
+
+.liste-projets, .liste-competences, .liste-temoignages, .liste-parcours{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.carte-projet, .carte-competence, .carte-temoignage, .carte-parcours{
+  background: var(--card-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  flex: 1 1 calc(33% - 2rem);
+  min-width: 220px;
+  color: var(--text-color);
+  opacity: 0.85;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carte-projet:hover, .carte-competence:hover, .carte-temoignage:hover, .carte-parcours:hover{
+  transform: translateY(-14px) scale(1.08);
+  background: #5d1624;
+  box-shadow: 0 25px 45px rgba(0,0,0,0.6);
+}
+
+/* --- Restauration du style d'origine pour le formulaire de contact et les boutons --- */
+
+.contact .formulaire-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  padding: 2rem;
+  border-radius: 16px;
+  background: var(--card-color);
+}
+
+input, textarea {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--card-color);
+  color: var(--text-color);
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.4);
+  /* suppression du gradient et de la bordure accent-color */
+  transition: color 0.2s;
+}
+input:focus, textarea:focus {
+  outline: 2px solid var(--main-color);
+  border: none;
+  box-shadow: 0 4px 16px rgba(119, 51, 68, 0.18);
+}
+
+button {
+  background: var(--main-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  min-width: 70px;
+}
+button:hover {
+  background: #5d1624;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 768px) {
+  .liste-projets, .liste-competences, .liste-temoignages {
+    flex-direction: column;
+  }
+
+  .carte-projet, .carte-competence, .carte-temoignage {
+    flex: 1 1 100%;
+  }
+}
+
+
+.floating-shapes {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  padding: 40px; 
+}
+
+.fermer {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  font-size: 2.2rem;
+  color: var(--main-color);
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+}
+.fermer:hover {
+  color: var(--accent-color);
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Responsive amélioré pour les cartes */
+@media (max-width: 900px) {
+  .carte-projet, .carte-competence, .carte-temoignage, .carte-parcours {
+    min-width: 160px;
+    flex: 1 1 100%;
+  }
+  .modal-contenu {
+    width: 95vw;
+    padding: 1.2rem 0.5rem;
+  }
+}
+
+/* Ajout d'un effet de glow sur les titres */
+h1, h2, h3 {
+  text-shadow: 0 2px 8px rgba(183,107,107,0.18), 0 1px 0 #fff2;
+}
+
+/* Effet de survol sur les images de projet */
+.img_projet {
+  transition: filter 0.3s, transform 0.3s;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(119, 51, 68, 0.10);
+}
+.carte-projet:hover .img_projet, .carte-parcours:hover .img_projet {
+  filter: brightness(1.08) saturate(1.2) drop-shadow(0 0 8px #b76b6b44);
+  transform: scale(1.04) rotate(-1deg);
+}
+
+/* Accentuation du focus pour l'accessibilité */
+:focus-visible {
+  outline: 2.5px solid var(--main-color-dark);
+  outline-offset: 2px;
+}
+/* Test details .projets*/
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0; top: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-contenu {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 70%;
+  max-width: 900px;
+  border-radius: 8px;
+  position: relative;
+
+   max-height: 80vh; /* ou une hauteur fixe, ex: height: 500px; */
+  overflow-y: auto;
+}
+
+.fermer {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.img_txt {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#img_univ {
+  max-width: 45%;
+  height: 300px;
+  width: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .img_txt {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  #img_univ {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Désactive le hover sur la carte d'accueil (Bienvenue sur mon portfolio) */
+#accueil .carte-parcours:hover {
+  background: var(--card-color) !important;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4) !important;
+  transform: none !important;
+  cursor: default !important;
+}
+
+/* Désactive le hover sur les hard-skills et soft-skills */
+#competences .carte-competence:hover {
+  background: var(--card-color) !important;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4) !important;
+  transform: none !important;
+  cursor: default !important;
+}
+
+/* Active le hover uniquement sur les cartes formation/parcours qui sont dans un lien */
+#parcours a .carte-parcours:hover {
+  background: #5d1624 !important;
+  box-shadow: 0 25px 45px rgba(0,0,0,0.6) !important;
+  transform: translateY(-14px) scale(1.08) !important;
+  cursor: pointer !important;
+}
