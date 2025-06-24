@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mon Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-uO3SX1sm1cC2/1FDKv4VmewjoGuhEzZEF8oEIkOJQrrzB+/xga+8Z/ehGQGXBjB7EpCJpMwiAGTZJtpoV7u9BA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+.floating-shapes {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  padding: 40px;
+}
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.25;
+  animation: floatShape 12s linear infinite alternate;
+}
+.floating-shape.shape1 { width: 120px; height: 120px; background: #e3b5a4; left: 10vw; top: 20vh; animation-delay: 0s; animation-name: floatShapeX; }
+.floating-shape.shape2 { width: 80px; height: 80px; background: #773344; left: 70vw; top: 60vh; animation-delay: 2s; animation-name: floatShapeY; }
+.floating-shape.shape3 { width: 150px; height: 150px; background: #e4ab97; left: 50vw; top: 10vh; animation-delay: 4s; animation-name: floatShapeX; }
+.floating-shape.shape4 { width: 60px; height: 60px; background: #b76b6b; left: 80vw; top: 30vh; animation-delay: 6s; animation-name: floatShapeY; }
+.floating-shape.shape5 { width: 90px; height: 90px; background: rgba(201, 127, 127, 0.826); left: 30vw; top: 80vh; animation-delay: 1s; animation-duration: 5s; animation-name: floatShapeX; }
+.floating-shape.shape6 { width: 50px; height: 50px; background: #e4ab97; left: 85vw; top: 10vh; animation-delay: 3s; animation-duration: 8s; animation-name: floatShapeY; }
+.floating-shape.shape7 { width: 70px; height: 70px; background: #b76b6b; left: 60vw; top: 50vh; animation-delay: 5s; animation-duration: 2s; animation-name: floatShapeX; }
+.floating-shape.shape8 { width: 110px; height: 110px; background: #773344; left: 15vw; top: 60vh; animation-delay: 7s; animation-duration: 5s; animation-name: floatShapeY; }
+@keyframes floatShapeX { 0% { transform: translateX(0) scale(1);} 50% { transform: translateX(80px) scale(1.1);} 100% { transform: translateX(0) scale(1);} }
+@keyframes floatShapeY { 0% { transform: translateY(0) scale(1);} 50% { transform: translateY(-80px) scale(1.1);} 100% { transform: translateY(0) scale(1);} }
+@keyframes floatShape { 0% { transform: translateY(0) scale(1) rotate(0deg);} 50% { transform: translateY(-120px) scale(1.15) rotate(8deg);} 100% { transform: translateY(-60px) scale(1.15) rotate(-8deg);} }
+</style>
+</head>
+<body>
+  <header>
+    <img src="photo_lycee.jpg" alt="Ma photo">
+    <h1 class="titre">Selma Mataiche</h1>
+    <nav>
+      
+      <h4><a href="portfolio2.html#accueil">
+        <i class="fa fa-home"></i>
+        Accueil</a>
+    </h4>
+    <h4><a href="a_propos.html">
+        <i class="fas fa-user" style="margin-right:0.5em;"></i>
+        A propos de moi</a>
+    </h4>
+    
+    <h4><a href="formation.html#presentation">  
+        <i class="fas fa-graduation-cap" style="margin-right:0.5em;"></i>
+        Formation</a>
+    </h4>
+    <h4>
+        <a href="formation.html#projets">
+            <i class="fas fa-lightbulb" style="margin-right:0.5em;"></i>
+            Projets
+        </a>
+    </h4>
+    <h4><a href="formation.html#competences">
+        <i class="fas fa-laptop-code" style="margin-right:0.5em;"></i>
+        Compétences</a>
+    </h4>
+    <h4><a href="#contact">
+        <i class="fas fa-envelope" style="margin-right:0.5em;"></i>
+        Contact</a>
+    </h4>
+    </nav>
+    <button id="boutonModeSombre">🌙</button>
+  </header>
+
+  <div class="floating-shapes">
+  <div class="floating-shape shape1"></div>
+  <div class="floating-shape shape2"></div>
+  <div class="floating-shape shape3"></div>
+  <div class="floating-shape shape4"></div>
+  <div class="floating-shape shape5"></div>
+  <div class="floating-shape shape6"></div>
+  <div class="floating-shape shape7"></div>
+  <div class="floating-shape shape8"></div>
+  <div class="floating-shape shape9"></div>
+  <div class="floating-shape shape10"></div>
+  <div class="floating-shape shape11"></div>
+  <div class="floating-shape shape12"></div>
+  <div class="floating-shape shape13"></div>
+  <div class="floating-shape shape14"></div>
+  <div class="floating-shape shape15"></div>
+  <div class="floating-shape shape16"></div>
+</div>
+<section class="Parcours" id="parcours">
+    <h1 class="apparaitre">Concours d'éloquence</h1>
+
+    <div class="liste-parcours">
+        <div class="liste-parcours">        
+            <p class="carte-parcours apparaitre" id="long_p" >
+                <strong>Le concours</strong><br>
+                <br> 
+                Le concours d’éloquence de l’IUT rassemble tous les étudiants du BUT Informatique 
+                et du BUT Science des Données. Après plusieurs phases de sélection, les six meilleurs 
+                candidats s’affrontent lors de la grande finale pour tenter de remporter le titre. 
+                Cette année, le sujet proposé était : <strong> Les outils numériques peuvent-ils réaliser 
+                tous nos désirs ? » </strong> 
+            </p>
+        </div>
+    </div>
+
+    <div class="liste-parcours">
+        <div class="liste-parcours">
+            <p class="carte-parcours apparaitre" id="long_p" >
+                <strong>Mon expérience</strong>
+                <br>
+                <br>                                           
+                Ce concours d’éloquence m’a permis de travailler mes compétences oratoires et écrites. 
+                C'est un exercice inhabituel mais sortir de ma zone de confort m'a finalement permis 
+                de découvrir que j'apprécias ce genre d'exercice. Construire un discours
+                argumenté, structurer mes idées, les exprimer clairement et surtout réussir à captiver son
+                auditoire.  C'etait un défi pour moi de m'exprimer devant un amphithéâtre rempli d'étudiant 
+                et de professeurs mais cette experience m'a permis de prendre confiance en moi.
+            </p>
+        </div>
+    </div>
+
+    <div class="liste-parcours">
+        <div class="liste-parcours">
+            <p class="carte-parcours apparaitre" id="long_p">
+                
+                <strong>Mon discours</strong>
+                <br>
+                <br>   
+                J'ai choisi de défendre la position selon laquelle les outils numériques ne peuvent pas 
+                réaliser tous nos désirs.
+                <br>  
+                <br>
+                <a href="Mataiche_Selma_texte_eloquance1.pdf" target="_blank" rel="noopener" class="repo">Télécharger mon discours</a>
+                <br>
+                <br>
+                <embed src="Mataiche_Selma_texte_eloquance1.pdf" width="800" height="500" type="application/pdf"/>
+                <br>
+         
+            </p>
+        </div>   
+    </div>
+
+    <div class="liste-parcours">
+        <div class="liste-parcours">
+            <p class="carte-parcours apparaitre" id="long_p">
+                
+                <strong>Ma préstation</strong>
+                <br>
+                <br>
+                <video controls width="800">
+                <source src="Selma.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+         
+            </p>
+        </div>   
+    </div>
+
+</section>
+
+
+  <section class="contact" id="contact">
+    <h2 class="apparaitre">Contact</h2>
+    <form action="https://formspree.io/f/xzzgbzna" method="POST" class="formulaire-contact">
+      <input type="text" name="nom" placeholder="Nom" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Message" required></textarea>
+      <input type="text" name="_gotcha" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;" aria-hidden="true">
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+
+  <footer style="background: var(--primary-color); color: var(--accent-color); padding: 2rem 1rem; text-align: center;">
+
+  <p>Contactez moi par mail<a href="mailto:selma.mataiche77@gmail.com" target="_blank" style="margin: 0 1rem; color: var(--accent-color);">selma.mataiche77@gmail.com</a>ou retrouvez-moi sur :</p>
+  <div style="margin-top: 1rem; font-size: 1.5rem;">
+
+    <button>
+    <a href="http://www.linkedin.com/in/selma-mataiche-981436297" target="_blank" style="margin: 0 1rem; color: var(--accent-color);">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <rect width="24" height="24" rx="4" fill="#cfa190"/>
+      <path d="M7.75 9.5h2.25v7H7.75v-7zm1.13-3.5a1.31 1.31 0 1 1 0 2.62 1.31 1.31 0 0 1 0-2.62zM11.5 9.5h2.16v.96h.03c.3-.57 1.02-1.17 2.1-1.17 2.25 0 2.67 1.48 2.67 3.4v3.81h-2.25v-3.38c0-.81-.01-1.85-1.13-1.85-1.13 0-1.3.88-1.3 1.79v3.44h-2.25v-7z" fill="#0e0e0e"/>
+      </svg>
+      LinkedIn
+    </a>
+    </button>
+
+    <button>
+    <a href="https://github.com/Selma-mtch/" target="_blank" style="margin: 0 1rem; color: var(--accent-color);">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <path fill="#cfa190" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.48 2.87 8.28 6.84 9.63.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/>
+</svg>
+      GitHub
+    </a>
+    </button>
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.9rem;">&copy; 2025 - Mataiche Selma</p>
+</footer>
+
+</body>
+</html>
