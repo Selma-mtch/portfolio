@@ -15,12 +15,37 @@ gsap.utils.toArray('.apparaitre').forEach((element) => {
   });
 });
 
-// Bouton mode sombre
+// Gestion du mode jour/nuit avec persistance
 const boutonMode = document.getElementById('boutonModeSombre');
 
+// Fonction pour appliquer le mode
+function appliquerMode(estModeJour) {
+  if (estModeJour) {
+    document.body.classList.add('dark');
+    boutonMode.textContent = '☀️';
+  } else {
+    document.body.classList.remove('dark');
+    boutonMode.textContent = '🌙';
+  }
+  // Sauvegarder le choix dans localStorage
+  localStorage.setItem('modeJour', estModeJour ? 'true' : 'false');
+}
+
+// Charger le mode sauvegardé au chargement de la page
+function chargerMode() {
+  const modeSauvegarde = localStorage.getItem('modeJour');
+  // Par défaut, mode nuit (false) si rien n'est sauvegardé
+  const estModeJour = modeSauvegarde === 'true';
+  appliquerMode(estModeJour);
+}
+
+// Appliquer le mode au chargement
+chargerMode();
+
+// Gérer le clic sur le bouton
 boutonMode.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  boutonMode.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+  const estActuellementModeJour = document.body.classList.contains('dark');
+  appliquerMode(!estActuellementModeJour);
 });
 
 
