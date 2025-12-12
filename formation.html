@@ -71,7 +71,7 @@
   <section class="presentation" id="presentation">
     <h1 class="titre">Ma formation</h1>
 
-    <div class="img_txt">
+    <div class="img_txt" style="flex-direction: column;">
 
         <img id="img_univ" src="photo_universite.jpg" alt="Photo Université Sorbonne Paris Nord">
         <p class="apparaitre" id="long_p"> 
@@ -126,11 +126,9 @@
                 <br>
                 Cette compétence m'apporte des connaissances en système et en réseau. Je peux ainsi
                 installer, cofigurer et gérer des environnements informatiques complexes.
-                à installer, configurer et administrer des systèmes,
-               L'installation et la configuration d'un poste de travail est une compétence clé Pour
-               un professionnel de l'informatique. J'ai pu m'en rendre compte lors de mon premier stage
-               chez Sage. Si avant ce stage je n'en avais pas conscience, j'ai pu constater lors de cette*
-              experience que cette compétence est essentielle.
+               L'installation et la configuration d'un poste de travail est une compétence clé pour
+               un professionnel de l'informatique. J'ai pu m'en rendre compte de l'importance de cette compétence
+               lors de mon premier stage chez Sage.
               </p>
           </div>
           <div class="carte-parcours apparaitre">
@@ -149,7 +147,9 @@
               <p>Planifier et exécuter des projets informatiques.
                 <br>
                 <br>
-                Grâce à cette compétence, Je suis capable d’organiser et de piloter un projet informatique de A à Z : définir les objectifs, planifier les tâches, coordonner l’équipe, suivre l’avancement et m’assurer que le résultat final répond aux attentes.
+                Grâce à cette compétence, Je suis capable d’organiser et de piloter un projet informatique de A à Z : 
+                définir les objectifs, planifier les tâches, coordonner l’équipe, suivre l’avancement 
+                et m’assurer que le résultat final répond aux attentes établies lors du recueil de besoins.
               </p>
           </div>
           <div class="carte-parcours apparaitre">
@@ -158,11 +158,10 @@
               <p>Travailler efficacement en équipe pour atteindre des objectifs communs.
                 <br>
                 <br>
-                Mon parcours aux nombreux projets collaboratifs m'a permis d'acquiérir une 
-                bonne capacité à collaborer efficacement au sein d'une équipe, en utilisant des
-                méthodes agiles et des outils de suivi.
+                Mon parcours, aux nombreux projets de groupe, m'a permis d'acquiérir de 
+                bonnes capacités de collaboration tout en appliquant des méthodologies agiles et des outils de suivi.
                 Cette compétence est essentielle dans le domaine de l'informatique, car la plupart des projets
-                se réalise en équie. 
+                se réalise en équipe. 
               </p>
           </div>
         </div>
@@ -213,10 +212,16 @@
       data-description="Description du projet 1"
       onclick="ouvrirModal(this)">
 
+      <img src="prototype_recueil.png" alt="Page d'accueil prototype" class="img_projet"><br>
+
         <h3>Recueil de besoins</h3>
-        <img src="prototype_recueil.png" alt="Page d'accueil prototype" class="img_projet"><br>
         Projet académique réaliser en autonomie.
-        <p> <strong>Recueil de besoins -  Communication - Prototype</strong></p>
+        <div class="tag-list">
+          <span class="tag">Recueil</span>
+          <span class="tag">UX</span>
+          <span class="tag">Maquettage</span>
+          <span class="tag">Gestion client</span>
+        </div>
         <a href="Livrable-5_Mataiche_Selma_Notos.pdf" target="_blank" rel="noopener" class="repo">
         Le prototype complet
         </a>
@@ -249,10 +254,15 @@
         </p> "
       data-description="Description du projet 2"
       onclick="ouvrirModal(this)">
+      <img src="logo_pingMe.png" alt="Logo PingMe" class="img_projet"><br>
         <h3>Application de disscussions</h3>
-        <img src="logo_pingMe.png" alt="Logo PingMe" class="img_projet"><br>
         Projet académique réaliser en autonomie.
-        <p> <strong>PHP - MySQL - JS - WebSocket </strong></p>       
+        <div class="tag-list">
+          <span class="tag">PHP</span>
+          <span class="tag">WebSocket</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Authentification</span>
+        </div>
         <a href="https://github.com/Cheick6/SAE_S1" target="_blank" class="repo">Repo GitHub</a> 
       </div>
 
@@ -283,10 +293,15 @@
         </p> "
       data-description="Description du projet 6"
       onclick="ouvrirModal(this)">
+      <img src="logo_pingMe.png" alt="Logo PingMe" class="img_projet"><br>
         <h3>Amélioration de l'application de disscussions</h3>
-        <img src="logo_pingMe.png" alt="Logo PingMe" class="img_projet"><br>
         Projet académique réaliser en autonomie.
-        <p> <strong>PHP - MySQL - JS - WebSocket </strong></p>       
+        <div class="tag-list">
+          <span class="tag">Refonte</span>
+          <span class="tag">PHP</span>
+          <span class="tag">Disscusion en temps réel</span>
+          <span class="tag">Tests</span>
+        </div>
         <a href="https://github.com/Cheick6/SAE_S1" target="_blank" class="repo">Repo GitHub</a> 
       </div>
 
@@ -297,10 +312,15 @@
       data-descritpion="Description du projet 3"
       onclick="ouvrirModal(this)">
 
+      <img src="discrous_femme.jpg" alt="Image discours"  class="img_projet"><br>
         <h3>Concours d'éloquence</h3>
-        <img src="discrous_femme.jpg" alt="Image discours"  class="img_projet"><br>
         1 ère place du concours d'éloquence de l'IUT de Villetaneuse.
-        <p> <strong>Communication - Expression orale et écrite </strong></p>
+        <div class="tag-list">
+          <span class="tag">Art oratoire</span>
+          <span class="tag">Ecriture</span>
+          <span class="tag">Storytelling</span>
+          <span class="tag">Communication</span>
+        </div>
         <a href="eloquence.html" class="repo">Détails</a>
       </div>
       
@@ -333,11 +353,16 @@
         "
         data-description="Description du projet 4 "
         onclick="ouvrirModal(this)">
+        <img src="24h_info_off.svg" alt="Logo 24h de l'info"  class="img_projet"><br>
           <h3>Organisation des 24h de l'info</h3>
-          <img src="24h_info_off.svg" alt="Logo 24h de l'info"  class="img_projet"><br>
           Concours réunissant tous les IUT de France afin de s’affronter 
             sur des épreuves d’informatique durant 24h sans interruption.
-          <p> <strong>Communication - Gestion de projet - Esprit d'équipe </strong></p>
+          <div class="tag-list">
+            <span class="tag">Gestion de projet</span>
+            <span class="tag">Logistique</span>
+            <span class="tag">Communication</span>
+            <span class="tag">Développement web</span>
+          </div>
           <a href="https://selma-mtch.github.io/24h_Info/" target="_blank" class="repo">Notre site</a>
         </div>
       
@@ -362,11 +387,16 @@
         "
         data-description="Description du projet 5"
         onclick="ouvrirModal(this)">
+        <img src="logo.png" alt="Logo SM-Pastry"  class="img_projet"><br>
           <h3>Site de recettes</h3>
-          <img src="logo.png" alt="Logo SM-Pastry"  class="img_projet"><br>
           Développement de mon site de recettes de pâtisserie.
           <p>Projet personnel</p>
-          <p> <strong>HTML - CSS - JS</strong></p>
+          <div class="tag-list">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JS</span>
+            <span class="tag">Ecriture</span>
+          </div>
           <a href="https://selma-mtch.github.io/SM-Pastry/" target="_blank" class="repo">Mon site</a>
         </div>
 
@@ -403,11 +433,16 @@
           </p> "
         data-description="Description du projet 6"
         onclick="ouvrirModal(this)">
+        <img src="logo_NDI.png" alt="Logo NDI" class="img_projet"><br>
           <h3>Participation à la nuit de l'info</h3>
-          <img src="logo_NDI.png" alt="Logo NDI" class="img_projet"><br>
           Concours national réunissant des milliers d’étudiants autour 
           d’un défi informatique à réaliser du coucher du soleil jusqu'au levé du soleil..
-          <p> <strong>Communication - Organisation - Développement web -  Resistance au sommeil... </strong></p>       
+          <div class="tag-list">
+            <span class="tag">Hackathon</span>
+            <span class="tag">Organisation</span>
+            <span class="tag">Développement web</span>
+            <span class="tag">Travail d'équipe</span>
+          </div>
           <a href="https://github.com/if-sleep-break/NUIT" target="_blank" class="repo">Repo GitHub</a> 
         </div>  
       
