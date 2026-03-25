@@ -1,6 +1,48 @@
-/* ============================================
-   MODERN PORTFOLIO - COMPUTER SCIENCE STUDENT
-   ============================================ */
+:root {
+  /* Modern Color Palette - Rosy/Bordeaux */
+  --primary: #cc4f8e;        /* Rose - primary actions */
+  --primary-dark: #0e0c0d;   /* Darker rose/bordeaux */
+  --primary-light: #e677b4;  /* Lighter rose */
+  --secondary: #9c27b0;      /* Purple - accents */
+  --accent: #f06595;         /* Pink - highlights */
+  --accent-light: #f8a5c2;   /* Light pink */
+  
+  /* Background Colors */
+  --bg-primary: #3e1f47;     /* Deep bordeaux - main background */
+  --bg-secondary: #5a2a62;   /* Darker rose - cards/sections */
+  --bg-tertiary: #7a3c7e;    /* Lighter rose - hover states */
+  
+  /* Text Colors */
+  --text-primary: #f8f0f7;   /* Almost white - main text */
+  --text-secondary: #eac7d3; /* Light pinkish-gray - secondary text */
+  --text-muted: #d8a6b8;     /* Muted pinkish-gray - less important text */
+
+  /* UI Elements */
+  --border-color: rgba(232, 193, 209, 0.1);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 20px rgba(214, 51, 132, 0.3);
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+    
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+}
 
 /* Reset & Base Styles */
 *,
@@ -11,79 +53,33 @@
   padding: 0;
 }
 
-:root {
-  /* Modern Color Palette - Tech/Professional */
-  --primary: #6366f1;        /* Indigo - primary actions */
-  --primary-dark: #4f46e5;  /* Darker indigo */
-  --primary-light: #818cf8; /* Lighter indigo */
-  --secondary: #8b5cf6;      /* Purple - accents */
-  --accent: #ec4899;         /* Pink - highlights */
-  --accent-light: #f472b6;   /* Light pink */
-  
-  /* Background Colors */
-  --bg-primary: #0f172a;     /* Deep navy - main background */
-  --bg-secondary: #1e293b;   /* Slate - cards/sections */
-  --bg-tertiary: #334155;    /* Lighter slate - hover states */
-  
-  /* Text Colors */
-  --text-primary: #f1f5f9;   /* Almost white - main text */
-  --text-secondary: #cbd5e1; /* Light gray - secondary text */
-  --text-muted: #94a3b8;     /* Muted gray - less important text */
-  
-  /* UI Elements */
-  --border-color: rgba(148, 163, 184, 0.1);
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.3);
-  
-  /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
-  
-  /* Border Radius */
-  --radius-sm: 0.5rem;
-  --radius-md: 0.75rem;
-  --radius-lg: 1rem;
-  --radius-xl: 1.5rem;
-  
-  /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition-base: 300ms ease;
-  --transition-slow: 500ms ease;
-}
-
 /* Light Mode - Modern & Elegant */
 body.dark {
-  /* Keep vibrant accent colors */
-  --primary: #6366f1;
-  --primary-dark: #4f46e5;
-  --primary-light: #818cf8;
-  --secondary: #8b5cf6;
-  --accent: #ec4899;
-  --accent-light: #f472b6;
+  /* Softer accent colors */
+  --primary: #a5b4fc;           /* Soft lavender blue */
+  --primary-dark: #818cf8;      /* Muted indigo */
+  --primary-light: #c7d2fe;     /* Light lavender blue */
+  --secondary: #bfa3f7;         /* Soft lilac */
+  --accent: #f3a6c9;            /* Pastel pink */
+  --accent-light: #f8c2d8;      /* Light pastel pink */
   
-  /* Light Background Colors - Soft & Clean */
-  --bg-primary: #f8fafc;        /* Very light blue-gray */
+  /* Light Background Colors - Softer tones */
+  --bg-primary: #f9fafb;        /* Very soft gray-blue */
   --bg-secondary: #ffffff;      /* Pure white for cards */
-  --bg-tertiary: #f1f5f9;       /* Light gray for hover */
+  --bg-tertiary: #f3f4f6;       /* Soft gray for hover */
   
-  /* Text Colors - Dark & Readable */
-  --text-primary: #0f172a;      /* Deep navy for main text */
+  /* Text Colors - Softer contrast */
+  --text-primary: #1e293b;      /* Dark slate for main text */
   --text-secondary: #475569;    /* Medium slate for secondary */
-  --text-muted: #64748b;        /* Muted slate for less important */
+  --text-muted: #6b7280;        /* Muted gray for less important */
   
   /* UI Elements - Subtle borders & shadows */
-  --border-color: rgba(15, 23, 42, 0.08);
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
-  --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.15);
+  --border-color: rgba(30, 41, 59, 0.08);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 20px rgba(165, 180, 252, 0.15);
 }
 
 /* Base Body Styles */
@@ -717,6 +713,29 @@ body.dark .modal-contenu {
   color: var(--text-primary);
   background: rgba(236, 72, 153, 0.2);
   transform: rotate(90deg) scale(1.1);
+}
+
+
+.liste-parcours-colonne {
+  display: flex;
+  flex-direction: column; /* Empile les éléments verticalement */
+  gap: 20px; /* Ajoute un espacement entre les cartes */
+}
+
+.liste-parcours {
+  width: 100%; /* Assure que chaque carte prend toute la largeur disponible */
+}
+
+.liste-parcours {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Ajoute un espacement entre les cartes */
+}
+
+section:nth-of-type(3) .liste-parcours {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 /* ============================================
